@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1><i>~ Local Library Home ~</i></h1>
+<br>
+<h2>Это реализация базовой страницы</h2>
+<p>Создаем модели (жанры, авторы, книги и пд.) и преобразовывам их <br>(URLки, функции для запроса данных, HTML для отображения этих данных и отправку их в браузер + темплейтс данных) <br>
+</p>
+<br> <br> <br>
+<h2>ИЗМЕНЯЕМЫЙ КОНТЕНТ</h2>
+
+<p>The library has the following record counts:</p>
+<ul>
+<li><strong>Books:</strong> {{ num_books }}</li>
+<li><strong>Copies:</strong> {{ num_instances }}</li>
+<li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+<li><strong>Authors:</strong> {{ num_authors }}</li>
+</ul>
+
+
+<p>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
+
+{% endblock %}
